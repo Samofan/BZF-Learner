@@ -101,7 +101,7 @@
                         <executions>
                             <execution>
                                 <id>package</id>
-                                <phase>install</phase>
+                                <phase>package</phase>
                                 <goals>
                                     <goal>exec</goal>
                                 </goals>
@@ -109,7 +109,12 @@
                         </executions>
                         <configuration>
                             <executable>${basedir}/build_windows.bat</executable>
-                            <arguments>${project.name}-${project.version}.jar</arguments>
+                            <arguments>
+                                <argument>${project.name}-${project.version}.jar</argument>
+                                <argument>${project.version}</argument>
+                                <argument>${project.description}</argument>
+                                <argument>${app.name}</argument>
+                            </arguments>
                         </configuration>
                     </plugin>
                 </plugins>
