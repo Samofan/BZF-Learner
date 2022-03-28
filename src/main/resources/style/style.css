@@ -1,0 +1,40 @@
+.background {
+    -fx-background-color: white;
+}
+
+.questionText {
+    -fx-background-color: white;
+    -fx-border-color: #1C6EA4;
+    -fx-border-radius: 10px;
+    -fx-border-width: 5px;
+    -fx-font-size: 21pt;
+}
+
+.answerToggleButton {
+    -fx-background-color: white;
+    -fx-font-size: 16pt;
+    -fx-border-color: #2592DA;
+    -fx-border-width: 3px;
+}
+
+.answerToggleButton:selected {
+    -fx-background-color: #9bcef0;
+    -fx-border-color: #1C6EA4;
+}
+
+.answerToggleButton:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #DEEFFA;
+}
+
+.answerToggleButton:wrong {
+    -fx-border-color: red;
+}
+
+.answerToggleButton:right {
+    -fx-border-color: green;
+}
+
+.bzfButton {
+    -fx-font-size: 12pt;
+}

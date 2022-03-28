@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="579.0" prefWidth="1161.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.floriandinter.controller.MenuController">
+   <children>
+      <VBox fx:id="startVBox" alignment="CENTER" layoutX="54.0" layoutY="100.0" spacing="20.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#startQuizAction" styleClass="bzfButton" text="Start" />
+            <Button fx:id="optionButton" mnemonicParsing="false" onAction="#settingsAction" styleClass="bzfButton" text="Optionen" />
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitApplicationAction" styleClass="bzfButton" text="Schließen" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
