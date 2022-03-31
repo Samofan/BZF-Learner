@@ -104,9 +104,9 @@ public class SettingsController implements Initializable {
     }
 
     private void parseAndSaveFile(File file, int firstPageWithQuestions) throws Exception {
-        File hiddenFolder = new File(FileLocations.HIDDEN_FOLDER);
-        if (!hiddenFolder.exists()) {
-            hiddenFolder.mkdir();
+        File saveLocation = new File(FileLocations.getSaveLocation());
+        if (!saveLocation.exists()) {
+            saveLocation.mkdir();
         }
 
         PdfReader pdfReader = new PdfReader(file.getAbsolutePath(), firstPageWithQuestions);

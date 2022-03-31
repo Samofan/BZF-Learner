@@ -1,21 +1,22 @@
 <configuration>
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${user.home}/.bzf-learner/bzf-learner.log</file>
+    <!--<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        &lt;!&ndash;<file>${user.home}/.bzf-learner/bzf-learner.log</file>&ndash;&gt;
+        <file>com.floriandinter.util.FileLocations.getSaveLocation()</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>archived-log/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
-            <!-- each archived file, size max 10MB -->
+            &lt;!&ndash; each archived file, size max 10MB &ndash;&gt;
             <maxFileSize>10MB</maxFileSize>
-            <!-- total size of all archive files, if total size > 20GB, it will delete old archived file -->
+            &lt;!&ndash; total size of all archive files, if total size > 20GB, it will delete old archived file &ndash;&gt;
             <totalSizeCap>1GB</totalSizeCap>
-            <!-- 60 days to keep -->
+            &lt;!&ndash; 60 days to keep &ndash;&gt;
             <maxHistory>60</maxHistory>
         </rollingPolicy>
 
         <encoder>
             <pattern>%d %p %c{1.} [%t] %m%n</pattern>
         </encoder>
-    </appender>
+    </appender>-->
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -27,12 +28,12 @@
 
     <logger name="com.floriandinter" level="debug" additivity="false">
         <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="FILE"/>
+        <!--<appender-ref ref="FILE"/>-->
     </logger>
 
     <root level="debug">
         <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="FILE-ROLLING"/>
+        <!--<appender-ref ref="FILE"/>-->
     </root>
 
 </configuration>
